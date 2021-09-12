@@ -10,7 +10,7 @@ See repository branches for supported hadoop versions
 
 ## Quick Start
 
-To build, run:
+To build, start Docker daemon, then run:
 
 ```
   make build
