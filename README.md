@@ -10,6 +10,12 @@ See repository branches for supported hadoop versions
 
 ## Quick Start
 
+To build, run:
+
+```
+  make build
+```
+
 To deploy an example HDFS cluster, run:
 ```
   docker-compose up
