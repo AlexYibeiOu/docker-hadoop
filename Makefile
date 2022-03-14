@@ -2,13 +2,13 @@ DOCKER_NETWORK = docker-hadoop_default
 ENV_FILE = hadoop.env
 current_branch := 3.3.0
 build:
-	docker build -t sufar/hadoop-base-arm64:$(current_branch) ./base
-	docker build -t sufar/hadoop-namenode:$(current_branch) ./namenode
-	docker build -t sufar/hadoop-datanode:$(current_branch) ./datanode
-	docker build -t sufar/hadoop-resourcemanager:$(current_branch) ./resourcemanager
-	docker build -t sufar/hadoop-nodemanager:$(current_branch) ./nodemanager
-	docker build -t sufar/hadoop-historyserver:$(current_branch) ./historyserver
-	docker build -t sufar/hadoop-submit:$(current_branch) ./submit
+	docker build --load -t sufar/hadoop-base-arm64:$(current_branch) ./base
+	docker build --load -t sufar/hadoop-namenode:$(current_branch) ./namenode
+	docker build --load -t sufar/hadoop-datanode:$(current_branch) ./datanode
+	docker build --load -t sufar/hadoop-resourcemanager:$(current_branch) ./resourcemanager
+	docker build --load -t sufar/hadoop-nodemanager:$(current_branch) ./nodemanager
+	docker build --load -t sufar/hadoop-historyserver:$(current_branch) ./historyserver
+	docker build --load -t sufar/hadoop-submit:$(current_branch) ./submit
 
 # wordcount:
 # 	docker build -t hadoop-wordcount ./submit
